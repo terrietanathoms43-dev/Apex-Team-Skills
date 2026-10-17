@@ -1,15 +1,18 @@
-# Delivery
+# Delivery — Terri-Etana Thoms
 
-**Workstream owner:** Terri-Etana Thoms
+**Owner:** Terri-Etana Thoms
 
-Delivery skills support planning deliverables, coordinating owners, tracking risks, reviewing readiness and communicating progress.
+## Scope
 
-## Reusable skills
-- **[Delivery planning](./ChatGPT/delivery-planning/SKILL.md)** — take an idea or requirements list and produce a trackable plan with owners, milestones and risks.
+This area covers coordinating project delivery: defining deliverables, sequencing tasks, monitoring progress, recording decisions, tracking blockers, reviewing readiness and communicating handoffs.
 
-These are reusable instructions, not claims that a plan has been completed. The ChatGPT starter skill has been drafted for owner review.
+## Skills and Workflows
 
-## Adding skills
-Use `Delivery/<AI-tool>/<skill-name>/SKILL.md`, for example `Delivery/ChatGPT/sprint-retrospective/SKILL.md`. Add a link here when ready.
+- [ChatGPT — Delivery Coordination](./ChatGPT/SKILL.md): starter instructions for organizing deliverables, milestones, and handoffs.
+- [Terri-Etana's team profile](./Terri-Etana-Thoms.md): earlier skills summary, kept for reference.
 
-[Earlier contributor profile](./Terri-Etana-Thoms.md) — background only.
+## Suggested Artifacts
+
+Project milestones, task/owner checklists, progress summaries, quality checks, release readiness notes and meeting action items.
+
+> Add further skills under the name of the AI tool actually used. Owner can refine these proposed responsibilities.

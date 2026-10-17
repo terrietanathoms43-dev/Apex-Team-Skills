@@ -1,61 +1,46 @@
-# Apex Team Skills
+# Apex Team Skills 🚀
 
-A reusable, **skills-first AI workflow library** for the Apex team. The folders represent *areas of work*, not individual people. Each skill is a set of repeatable instructions an AI assistant can follow to produce a consistent outcome.
+A collaborative library of the **Apex team's skills, workflows, and AI-assisted work**. Folders are organized by **skill area**, not by individual.
 
-## Team ownership
+## Workstreams and Owners
 
-| Skill area | Assigned owner | Starter AI skills |
+| Area | Owner | Responsibilities |
 | --- | --- | --- |
-| [Delivery](./Delivery/) | Terri-Etana Thoms | [Delivery planning](./Delivery/ChatGPT/delivery-planning/SKILL.md) |
-| [UI](./UI/) | Maxwell Wedderburn (Max) | [UI design specification](./UI/ChatGPT/ui-design-specification/SKILL.md) |
-| [Tech Stack Architecture](./Tech-Stack-Architecture/) | Raheem Gordon | [Architecture review](./Tech-Stack-Architecture/ChatGPT/architecture-review/SKILL.md) |
-| [UX](./UX/) | Matthew Messado | [UX journey review](./UX/ChatGPT/ux-journey-review/SKILL.md) |
+| [Delivery](./Delivery/) | **Terri-Etana Thoms** | Planning delivery, coordinating tasks, tracking progress and preparing handoffs |
+| [UI](./UI/) | **Maxwell Wedderburn (Max)** | Visual design, interface components and responsive layouts |
+| [Tech Stack Architecture](./Tech-Stack-Architecture/) | **Raheem Gordon** | Technology decisions, system structure, integrations and engineering standards |
+| [UX](./UX/) | **Matthew Messado** | User journeys, interactions, usability and accessibility |
 
-## Repository layout
+## Folder Convention
+
+Each top-level folder is a **skill area**. Its `README.md` introduces the area and names the owner. AI-assisted skills are stored **under the AI tool actually used**:
 
 ```text
 Apex-Team-Skills/
-├── README.md
-├── SKILL-TEMPLATE.md
 ├── Delivery/
 │   ├── README.md
+│   ├── Terri-Etana-Thoms.md
 │   └── ChatGPT/
-│       └── delivery-planning/
-│           └── SKILL.md
+│       └── SKILL.md
 ├── UI/
 │   ├── README.md
-│   └── ChatGPT/
-│       └── ui-design-specification/
-│           └── SKILL.md
+│   └── Maxwell-Wedderburn.md
 ├── Tech-Stack-Architecture/
 │   ├── README.md
-│   └── ChatGPT/
-│       └── architecture-review/
-│           └── SKILL.md
+│   └── Raheem-Gordon.md
 └── UX/
     ├── README.md
-    └── ChatGPT/
-        └── ux-journey-review/
-            └── SKILL.md
+    └── Matthew-Messado.md
 ```
 
-## How to use a skill
+For example, if Max develops a UI skill using Claude, the skill file can be added at `UI/Claude/SKILL.md`. If another tool is used, create a folder with **that tool's actual name**. Do not assume every teammate uses the same AI.
 
-1. Open the `SKILL.md` for the task you need.
-2. Give its instructions to your AI assistant, or install/import the skill using your AI application's documented skill mechanism, if one is supported. **A GitHub file alone does not automatically activate a skill.**
-3. Supply relevant project information and any available evidence. Follow the skill's input requirements.
-4. Review the AI output before relying on or sharing it. Correct unsupported assumptions.
-5. Improve the instructions if the workflow needs to be more repeatable.
+## Contributing
 
-## How to contribute
+1. Open the README for your assigned area.
+2. Add your workflow or skill files in a subfolder named for the AI tool used (such as `Claude` or `ChatGPT`).
+3. Describe the goal, inputs, instructions, expected outputs, limitations and an example in your skill file.
+4. Keep credentials, private data and other secrets out of this public repository.
+5. Update your area README with links to new skills.
 
-- Store skills under **Area / AI Tool / skill-name / SKILL.md**, e.g. `UI/Claude/component-system/SKILL.md`.
-- Use the **AI tool actually used for that skill**. The current `ChatGPT` files are initial ChatGPT-created drafts for team review; they **do not establish which AI tool Max, Raheem or Matthew personally uses**.
-- Start from [SKILL-TEMPLATE.md](./SKILL-TEMPLATE.md). Give each skill a distinct purpose, required inputs, step-by-step instructions, specified outputs, practical examples and limits.
-- Add supporting assets alongside the skill when needed (e.g. `references/`, `examples/`, `scripts/`). Keep them under the skill's folder.
-- The relevant workstream owner should **review and approve** contributed skills before presenting them as team-approved practices.
-- Never commit private credentials, access tokens, private personal data or proprietary materials without permission.
-
-## Team profiles
-
-Previously drafted individual bios are retained as supporting documents, **not** as substitutes for reusable skills: [Delivery profile](./Delivery/Terri-Etana-Thoms.md), [UI profile](./UI/Maxwell-Wedderburn.md), [Architecture profile](./Tech-Stack-Architecture/Raheem-Gordon.md), and [UX profile](./UX/Matthew-Messado.md).
+Individual profiles are preserved inside their assigned areas for reference. Skills and tools mentioned in profiles should be confirmed by their respective owners.
