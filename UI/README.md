@@ -1,19 +1,15 @@
-# UI — Maxwell Wedderburn
+# UI (User Interface)
 
-**Owner:** Maxwell Wedderburn (**Max**)
+**Workstream owner:** Maxwell Wedderburn (Max)
 
-## Scope
+UI skills address **visual interface design**: layout, typography, component states, consistent styling and responsive behaviour. They should specify visible and verifiable results.
 
-UI focuses on the **visual presentation and interface implementation** of the product: layouts, typography, colours, components, screen states and responsiveness.
+## Reusable skills
+- **[UI design specification](./ChatGPT/ui-design-specification/SKILL.md)** — produce implementable screen and component specifications based on requirements.
 
-## Skills and Workflows
+This is an initial **ChatGPT-created draft**, not a claim that Max uses ChatGPT or that he has approved the contents.
 
-Skill files can be added under the AI tool used, for example `UI/Claude/SKILL.md` or `UI/ChatGPT/SKILL.md`. The tool has not yet been confirmed.
+## Adding skills
+Use `UI/<AI-tool>/<skill-name>/SKILL.md`; for example, if Max uses Claude, `UI/Claude/component-design/SKILL.md`. Link each added skill here.
 
-- [Maxwell's team profile](./Maxwell-Wedderburn.md) — original profile template, preserved for Max to complete.
-
-## Suggested Artifacts
-
-Design patterns, component guidelines, screen mockups, responsive specifications, and UI review checklists.
-
-> Maxwell should confirm his specific skills and the AI tools he uses before those details are recorded as fact.
+[Earlier contributor profile](./Maxwell-Wedderburn.md) — background/template only.

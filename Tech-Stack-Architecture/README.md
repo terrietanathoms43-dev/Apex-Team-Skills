@@ -1,19 +1,15 @@
-# Tech Stack Architecture — Raheem Gordon
+# Tech Stack Architecture
 
-**Owner:** Raheem Gordon
+**Workstream owner:** Raheem Gordon
 
-## Scope
+Architecture skills guide decisions about systems, technologies, integrations, data flow, reliability, security and tradeoffs.
 
-This area covers **technical design decisions**: choosing technologies, organizing services and components, selecting integrations, defining data flow and documenting engineering tradeoffs.
+## Reusable skills
+- **[Architecture review](./ChatGPT/architecture-review/SKILL.md)** — analyze proposed technical architecture, identify risks and produce a documented recommendation.
 
-## Skills and Workflows
+This is an initial **ChatGPT-created draft**, not a claim that Raheem uses ChatGPT or that he has approved the contents.
 
-Store each AI-assisted workflow under the tool used, such as `Tech-Stack-Architecture/Claude/SKILL.md` or `Tech-Stack-Architecture/ChatGPT/SKILL.md`. The tool used has not yet been confirmed.
+## Adding skills
+Use `Tech-Stack-Architecture/<AI-tool>/<skill-name>/SKILL.md`, and link new skills here. Record which requirements and constraints were verified.
 
-- [Raheem's team profile](./Raheem-Gordon.md) — earlier introduction and links, preserved for reference.
-
-## Suggested Artifacts
-
-Architecture decision records, system diagrams, integration plans, technology comparisons, security considerations, and technical documentation.
-
-> Raheem should confirm which tools and architecture skills are appropriate to publish here.
+[Earlier contributor profile](./Raheem-Gordon.md) — background/template only.

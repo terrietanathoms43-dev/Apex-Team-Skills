@@ -1,19 +1,15 @@
-# UX — Matthew Messado
+# UX (User Experience)
 
-**Owner:** Matthew Messado
+**Workstream owner:** Matthew Messado
 
-## Scope
+UX skills address **the user's experience**: tasks, flows, navigation, accessibility, friction points and evidence-based usability evaluation.
 
-UX focuses on **how people experience the product**: understanding user needs, planning journeys and interactions, simplifying flows and evaluating usability.
+## Reusable skills
+- **[UX journey review](./ChatGPT/ux-journey-review/SKILL.md)** — examine a user journey, locate friction and propose testable improvements.
 
-## Skills and Workflows
+This is an initial **ChatGPT-created draft**, not a claim that Matthew uses ChatGPT or that he has approved the contents.
 
-Place AI-assisted skill instructions under a subfolder named after the actual tool used, for example `UX/Claude/SKILL.md` or `UX/ChatGPT/SKILL.md`. The tool used has not yet been confirmed.
+## Adding skills
+Use `UX/<AI-tool>/<skill-name>/SKILL.md`; for example, `UX/Claude/onboarding-journey/SKILL.md` when using Claude. Link each added skill here.
 
-- [Matthew's team profile](./Matthew-Messado.md) — original profile template, preserved for Matthew to complete.
-
-## Suggested Artifacts
-
-User journeys, flow diagrams, accessibility reviews, navigation plans, usability checklists and testing notes.
-
-> Matthew should confirm his skills and tool choices before adding specific claims.
+[Earlier contributor profile](./Matthew-Messado.md) — background/template only.
