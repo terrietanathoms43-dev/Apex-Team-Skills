@@ -1,0 +1,273 @@
+/*
+ * Apex UI token template for app/globals.css (Tailwind v4 + next-themes class strategy).
+ *
+ * Copy this file over app/globals.css, then fill the BRAND slots (search "BRAND").
+ * Everything not marked BRAND is the Apex standard and stays as it is in every product,
+ * so status colours, neutrals and spacing feel identical across the team's apps.
+ *
+ * Worked example at the bottom: Trackwise (royal blue + gold).
+ */
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* next-themes puts .dark on <html> */
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  color-scheme: light;
+  --radius: 0.625rem;
+
+  /* --- neutrals (fixed) ------------------------------------------------- */
+  --background: oklch(0.99 0 0);
+  --foreground: oklch(0.2 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.2 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.2 0 0);
+  --secondary: oklch(0.96 0 0);
+  --secondary-foreground: oklch(0.2 0 0);
+  --muted: oklch(0.965 0 0);
+  --muted-foreground: oklch(0.5 0 0);
+  --accent: oklch(0.955 0 0); /* shadcn's quiet hover surface, not the brand */
+  --accent-foreground: oklch(0.2 0 0);
+  --border: oklch(0.92 0 0);
+  --input: oklch(0.9 0 0);
+  --sidebar: oklch(0.982 0 0);
+  --sidebar-foreground: oklch(0.2 0 0);
+
+  /* --- BRAND (fill these) ------------------------------------------------
+   * Default = monochrome: primary is the foreground colour, accent blue for links/focus.
+   * A branded product replaces primary/ring/link/selection/sidebar-accent with its hue,
+   * and may add --highlight for one warm secondary colour. Nothing else changes. */
+  --primary: oklch(0.2 0 0);                  /* BRAND */
+  --primary-foreground: oklch(0.99 0 0);      /* BRAND: ≥4.5:1 on primary */
+  --ring: oklch(0.55 0.17 265);               /* BRAND */
+  --link: oklch(0.5 0.17 265);                /* BRAND */
+  --selection: oklch(0.55 0.17 265 / 0.18);   /* BRAND */
+  --sidebar-accent: oklch(0.94 0 0);          /* BRAND: a 5–8% tint of the brand for the active nav item */
+  --highlight: oklch(0.84 0.11 82);           /* BRAND (optional second colour) */
+  --highlight-foreground: oklch(0.3 0.08 70); /* BRAND */
+
+  /* --- semantic (fixed) ------------------------------------------------- */
+  --destructive: oklch(0.55 0.21 25);
+
+  /* status: background / text / dot — text is AA on its background, dots 3:1 on the page */
+  --status-not-started-bg: oklch(0.955 0 0);
+  --status-not-started-fg: oklch(0.42 0 0);
+  --status-not-started-dot: oklch(0.62 0 0);
+  --status-in-progress-bg: oklch(0.95 0.03 250);
+  --status-in-progress-fg: oklch(0.45 0.15 250);
+  --status-in-progress-dot: oklch(0.58 0.17 250);
+  --status-awaiting-bg: oklch(0.96 0.05 85);
+  --status-awaiting-fg: oklch(0.47 0.1 70);
+  --status-awaiting-dot: oklch(0.65 0.14 72);
+  --status-blocked-bg: oklch(0.955 0.03 25);
+  --status-blocked-fg: oklch(0.5 0.19 25);
+  --status-blocked-dot: oklch(0.6 0.21 25);
+  --status-rejected-bg: oklch(0.95 0.008 260);
+  --status-rejected-fg: oklch(0.45 0.02 260);
+  --status-rejected-dot: oklch(0.6 0.02 260);
+  --status-completed-bg: oklch(0.955 0.04 150);
+  --status-completed-fg: oklch(0.45 0.12 150);
+  --status-completed-dot: oklch(0.6 0.15 150);
+
+  --priority-urgent: oklch(0.56 0.21 25);
+  --priority-high: oklch(0.63 0.17 50);
+  --priority-low: oklch(0.6 0 0);
+}
+
+.dark {
+  color-scheme: dark;
+
+  --background: oklch(0.16 0.005 260);
+  --foreground: oklch(0.95 0 0);
+  --card: oklch(0.2 0.005 260);
+  --card-foreground: oklch(0.95 0 0);
+  --popover: oklch(0.21 0.005 260);
+  --popover-foreground: oklch(0.95 0 0);
+  --secondary: oklch(0.24 0.005 260);
+  --secondary-foreground: oklch(0.95 0 0);
+  --muted: oklch(0.23 0.005 260);
+  --muted-foreground: oklch(0.7 0.005 260);
+  --accent: oklch(0.25 0.005 260);
+  --accent-foreground: oklch(0.95 0 0);
+  --border: oklch(0.28 0.005 260);
+  --input: oklch(0.31 0.005 260);
+  --sidebar: oklch(0.18 0.005 260);
+  --sidebar-foreground: oklch(0.95 0 0);
+
+  --primary: oklch(0.95 0 0);                 /* BRAND */
+  --primary-foreground: oklch(0.16 0.005 260);/* BRAND */
+  --ring: oklch(0.72 0.15 265);               /* BRAND */
+  --link: oklch(0.76 0.13 265);               /* BRAND */
+  --selection: oklch(0.72 0.15 265 / 0.3);    /* BRAND */
+  --sidebar-accent: oklch(0.24 0.005 260);    /* BRAND */
+  --highlight: oklch(0.8 0.12 82);            /* BRAND */
+  --highlight-foreground: oklch(0.2 0.05 70); /* BRAND */
+
+  --destructive: oklch(0.65 0.19 25);
+
+  --status-not-started-bg: oklch(0.26 0.005 260);
+  --status-not-started-fg: oklch(0.8 0 0);
+  --status-not-started-dot: oklch(0.62 0 0);
+  --status-in-progress-bg: oklch(0.28 0.06 250);
+  --status-in-progress-fg: oklch(0.82 0.09 250);
+  --status-in-progress-dot: oklch(0.7 0.15 250);
+  --status-awaiting-bg: oklch(0.29 0.05 75);
+  --status-awaiting-fg: oklch(0.86 0.11 82);
+  --status-awaiting-dot: oklch(0.78 0.15 80);
+  --status-blocked-bg: oklch(0.28 0.07 25);
+  --status-blocked-fg: oklch(0.82 0.1 25);
+  --status-blocked-dot: oklch(0.68 0.19 25);
+  --status-rejected-bg: oklch(0.26 0.01 260);
+  --status-rejected-fg: oklch(0.75 0.02 260);
+  --status-rejected-dot: oklch(0.58 0.02 260);
+  --status-completed-bg: oklch(0.28 0.05 150);
+  --status-completed-fg: oklch(0.82 0.11 150);
+  --status-completed-dot: oklch(0.7 0.15 150);
+
+  --priority-urgent: oklch(0.7 0.18 25);
+  --priority-high: oklch(0.76 0.14 55);
+  --priority-low: oklch(0.62 0.005 260);
+}
+
+/* Expose every token to Tailwind as a colour utility (bg-primary, text-status-blocked-fg, …). */
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --default-transition-duration: 150ms;
+  --default-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-link: var(--link);
+  --color-highlight: var(--highlight);
+  --color-highlight-foreground: var(--highlight-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+
+  --color-status-not-started-bg: var(--status-not-started-bg);
+  --color-status-not-started-fg: var(--status-not-started-fg);
+  --color-status-not-started-dot: var(--status-not-started-dot);
+  --color-status-in-progress-bg: var(--status-in-progress-bg);
+  --color-status-in-progress-fg: var(--status-in-progress-fg);
+  --color-status-in-progress-dot: var(--status-in-progress-dot);
+  --color-status-awaiting-bg: var(--status-awaiting-bg);
+  --color-status-awaiting-fg: var(--status-awaiting-fg);
+  --color-status-awaiting-dot: var(--status-awaiting-dot);
+  --color-status-blocked-bg: var(--status-blocked-bg);
+  --color-status-blocked-fg: var(--status-blocked-fg);
+  --color-status-blocked-dot: var(--status-blocked-dot);
+  --color-status-rejected-bg: var(--status-rejected-bg);
+  --color-status-rejected-fg: var(--status-rejected-fg);
+  --color-status-rejected-dot: var(--status-rejected-dot);
+  --color-status-completed-bg: var(--status-completed-bg);
+  --color-status-completed-fg: var(--status-completed-fg);
+  --color-status-completed-dot: var(--status-completed-dot);
+
+  --color-priority-urgent: var(--priority-urgent);
+  --color-priority-high: var(--priority-high);
+  --color-priority-low: var(--priority-low);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    @apply bg-background font-sans text-sm text-foreground antialiased;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply tracking-tight;
+  }
+  ::selection {
+    background: var(--selection);
+  }
+  /* Visible focus everywhere; shadcn controls replace this with their own ring. */
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0.6;
+  }
+}
+
+/* Reports print as the document alone. */
+@media print {
+  aside,
+  header,
+  nav,
+  [data-print-hide],
+  .print\:hidden {
+    display: none !important;
+  }
+  html,
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+  main {
+    padding: 0 !important;
+  }
+  a {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+}
+
+/*
+ * ---------------------------------------------------------------------------
+ * Worked example: Trackwise (royal blue #234a9e / navy #102a63 / gold #f2c56f)
+ * Replace the BRAND slots above with these values.
+ *
+ * :root {
+ *   --primary: oklch(0.43 0.14 262);            // royal blue
+ *   --primary-foreground: oklch(0.99 0 0);
+ *   --ring: oklch(0.55 0.17 262);
+ *   --link: oklch(0.45 0.15 262);
+ *   --selection: oklch(0.55 0.17 262 / 0.18);
+ *   --sidebar-accent: oklch(0.95 0.025 262);    // pale blue active nav
+ *   --highlight: oklch(0.84 0.11 82);           // gold
+ *   --highlight-foreground: oklch(0.32 0.08 70);
+ * }
+ * .dark {
+ *   --primary: oklch(0.72 0.14 262);
+ *   --primary-foreground: oklch(0.16 0.02 262);
+ *   --ring: oklch(0.72 0.15 262);
+ *   --link: oklch(0.78 0.12 262);
+ *   --selection: oklch(0.72 0.15 262 / 0.3);
+ *   --sidebar-accent: oklch(0.26 0.04 262);
+ *   --highlight: oklch(0.82 0.12 82);
+ *   --highlight-foreground: oklch(0.2 0.05 70);
+ * }
+ * ---------------------------------------------------------------------------
+ */
