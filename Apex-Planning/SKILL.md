@@ -1,6 +1,7 @@
 ---
 name: apex-planning
-description: How the Apex team turns an idea or a messy brief into a plan that a person or an AI agent can build from without re-opening decisions. Use it whenever someone asks to plan, scope, spec, estimate, phase, prioritise, "write up what we're building", start a new project or a rebuild, define an MVP, write a PRD/brief/plan/roadmap, decide what not to build, or hand a codebase over to another builder. It produces two short documents (BRIEF.md for intent, PLAN.md for locked decisions: stack, routes, roles, schema, tokens, steps with a definition of done) plus the AGENTS.md handoff, and it fixes the phase order and the done-criteria every Apex build follows. Reach for it before writing any code on a new feature of more than a day's work.
+description: >-
+  How the Apex team turns an idea or a messy brief into a plan that a person or an AI agent can build from without re-opening decisions. Use it whenever someone asks to plan, scope, spec, estimate, phase, prioritise, "write up what we're building", start a new project or a rebuild, define an MVP, write a PRD/brief/plan/roadmap, decide what not to build, or hand a codebase over to another builder. It produces two short documents (BRIEF.md for intent, PLAN.md for locked decisions: stack, routes, roles, schema, tokens, steps with a definition of done) plus the AGENTS.md handoff, and it fixes the phase order and the done-criteria every Apex build follows. Reach for it before writing any code on a new feature of more than a day's work.
 ---
 
 # Apex Planning
