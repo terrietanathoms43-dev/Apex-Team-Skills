@@ -26,7 +26,7 @@ cmd /c mklink /J "$HOME\.claude\skills\Apex-UI" "C:\path\to\Apex-Skills\Apex-UI"
 ln -s /path/to/Apex-Skills/Apex-UI ~/.claude/skills/Apex-UI
 ```
 
-Restart Claude Code (or start a new session) and the skills appear in the skill list. Invoke one directly with `/apex-ui`, `/apex-ux`, `/apex-planning`, `/apex-architecture`, /apex-recursive-walkthrough`, or just describe the work: the descriptions are written so Claude reaches for them on its own.
+Restart Claude Code (or start a new session) and the skills appear in the skill list. Invoke one directly with `/apex-ui`, `/apex-ux`, `/apex-planning`, `/apex-architecture`, `/apex-recursive-walkthrough`, or just describe the work: the descriptions are written so Claude reaches for them on its own.
 
 ## How the five fit together
 
